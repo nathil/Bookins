@@ -5,17 +5,6 @@ public class LoginCadastro {
 	private String usuario;
 	private String senha;
 	
-	public LoginCadastro(String email, String usuario, String senha){
-		this.email = email;
-		this.usuario = usuario;
-		this.senha = senha;
-	}
-	
-	public LoginCadastro(String email, String senha){
-		this.email = email;
-		this.senha = senha;
-	}
-
 	public String getEmail() {
 		return email;
 	}
