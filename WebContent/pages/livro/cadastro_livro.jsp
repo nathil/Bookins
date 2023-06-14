@@ -7,13 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="#" method="POST">
+	<form action="resposta_cadastro.jsp" method="POST">
 		Titulo <input type="text" name="titulo"><br>
 		Descriçao <textarea rows="5" cols="33" name="descricao"></textarea><br>
-		Preço <input type="number" name="preco"><br>
-		<select name="categoria">
-			<option value="" selected>Selecione uma categoria</option>
-		</select><br>
+		Preço <input type="number" name="preco" min="0.00"><br>
 		<input type="submit" value="Adicionar">
 	</form>
 </body>
