@@ -12,7 +12,7 @@ public class SelectDao {
 		
 		try {
 			con = new Conexao();
-			con.executeUpdate("SELECT * FROM livro");
+			con.executeQuery("SELECT * FROM livro");
 		}catch(SQLException e){
 			System.out.print(e);
 		}
