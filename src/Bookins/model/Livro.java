@@ -4,18 +4,8 @@ public class Livro {
 	private int id;
 	private String titulo;
 	private String descricao;
-	private int quantidade;
 	private double preco;
-	private double total;
-	
-	public Livro(int id, String titulo, String descricao, int quantidade, double preco, double total) {
-		this.id = id;
-		this.titulo = titulo;
-		this.descricao = descricao;
-		this.quantidade = quantidade;
-		this.preco = preco;
-		this.total = total;
-	}
+	private String categoria;
 
 	public int getId() {
 		return id;
@@ -41,14 +31,6 @@ public class Livro {
 		this.descricao = descricao;
 	}
 
-	public int getQuantidade() {
-		return quantidade;
-	}
-
-	public void setQuantidade(int quantidade) {
-		this.quantidade = quantidade;
-	}
-
 	public double getPreco() {
 		return preco;
 	}
@@ -57,13 +39,11 @@ public class Livro {
 		this.preco = preco;
 	}
 
-	public double getTotal() {
-		return total;
+	public String getCategoria() {
+		return categoria;
 	}
 
-	public void setTotal(double total) {
-		this.total = total;
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
 	}
-	
-	
 }
