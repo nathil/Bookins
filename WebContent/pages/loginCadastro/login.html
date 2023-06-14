@@ -3,13 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="../../css/login.css"></link>
 </head>
 <body>
-	Fazer Login
-	<form action="login.jsp">
-		<input type="email" id="email" name="email" placeholder="Email"><br>
-		<input type="password" id="senha" name="senha" placeholder="Senha"><br>
-		<input type="submit" id="submit">
-	</form>
+	 <header>
+        <div class="menu">
+            <h1>BOOK'INS</h1>
+        </div>
+    </header>
+    <section id="sectionILogin">
+        <div class="social"></div>
+        <div class="login">
+            <h1 class="h1_login">Fazer login</h1>
+            <form class="login-form">
+
+                <input class="input" type="text" name="usuario" id="iusuario" placeholder="Usuário">
+
+                <input class="input" type="password" name="senha" id="isenha" placeholder="Senha">
+                <div class="ajuda"><p>Esqueceu sua senha?</p></div>
+
+                <input type="submit" class="submit" value="Entrar">
+                
+            </form>
+        </div>
+    </section>
 </body>
 </html>

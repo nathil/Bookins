@@ -12,62 +12,43 @@
     margin: 0;
 }
 /*Section*/
-section#sectionIndex{
+body{
+    background: linear-gradient(0deg, var(--gradiente-cor2) 0%, var(--gradiente-cor1) 99.09%);
+}
+header{
+    position: fixed;
+    width: 100%;
+}
+.menu{
+    width: 100%;
+    position: sticky;
+    color: #FFFFFF;
+}
+.menu h1{
+    text-indent: 30px;
+}
+#sectionILogin{
+    color: #FFFFFF;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    color: #FFFFFF;
+    
+    background: linear-gradient(0deg, var(--gradiente-cor2) 0%, var(--gradiente-cor1) 99.09%);
 }
 
-/*Entrar*/
-div.entrar{
+div.login{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     height: 100%;
-    width: 50%;
-    gap: 3%;
-    background: linear-gradient(180deg, var(--gradiente-cor1) 0%, var(--gradiente-cor2) 100%);
-}
-a.link-entrar{
-    font-size: 1em;
-    width: 100px;
-    border: 1px solid #ffffff;
-    color: #FFFFFF;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 30px;
-    padding: 15px 30px;
-}
-a.link-entrar:hover{
-    background-color: #ffffff;
-    color: var(--azul);
+    width: 100%;
 }
 
-p.bookins{
-    font-size: 5em;
-    font-weight: bolder;
-}
-
-h1.h1_entrar{
-    font-size: 2.5em;
-    font-weight: normal;
-}
-
-/*Cadastrar*/
-div.cadastrar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
-    width: 50%;
-    background-color: var(--azul);
-}
-
-form.formCadastro{
+/*form*/
+form.login-form{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,14 +56,17 @@ form.formCadastro{
     gap: 10px;
 }
 
-form.formCadastro .input{
+form.login-form .input{
     text-indent: 40px;
     background-color: var(--input-white);
 }
 
 input.submit{
-    background-color: var(--input-azul);
+    font-size: 1em;
+    width: 50px;
+    border: 1px solid #ffffff;
     color: #FFFFFF;
+    background-color: var(--azul);
 }
 input.submit:hover{
     cursor: pointer;
@@ -97,10 +81,11 @@ input.submit, .input{
     height: 45px;
     border: none;
 }
-h1.h1_cadastro{
+h1.h1_login{
     font-weight: normal;
     font-size: 2.5em;
 }
+
 .ajuda{
     width: 100%;
 }
@@ -110,15 +95,6 @@ h1.h1_cadastro{
 .ajuda p:hover{
     cursor: pointer;
 }
-
 @media screen and (max-width: 763px){
-    section#sectionIndex{
-        flex-direction: column;
-    }
-    div.entrar{
-        width: 100%;
-    }
-    div.cadastrar{
-        width: 100%;
-    }
+
 }

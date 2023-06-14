@@ -19,7 +19,7 @@ if(ok){
 %>
 <script type="text/javascript">
 	alert("Usuário cadastrado com sucesso!");
-	window.location.href="cadastroProfessor.jsp";
+	window.location.href="./login.html";
 </script>
 <%}else{ %>
 <script type="text/javascript">

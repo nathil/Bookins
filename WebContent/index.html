@@ -3,17 +3,30 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link rel="stylesheet" href="./css/style.css"></link>
 </head>
 <body>
-	Seja bem vindo
-	<br>Book'ins
-	<a href="./pages/loginCadastro/login.html" target="_self">Entrar</a><br>
-	
-	<form method="POST" action="./pages/loginCadastro/respostaCadastro.jsp">
-		<input type="email" id="email" name="email" placeholder="Email"><br>
-		<input type="text" id="usuario" name="usuario" placeholder="Usuário"><br>
-		<input type="password" id="senha" name="senha" placeholder="Senha"><br>
-		<input type="submit" id="submit">
-	</form>
+	<section id="sectionIndex">
+        <div class="entrar">
+            <h1 class="h1_entrar">SEJA BEM-VINDO!</h1>
+            <p class="bookins">BOOK'INS</p>
+            <a class="link-entrar" href="./pages/loginCadastro/login.html">Entrar</a>
+        </div>
+
+        <div class="cadastrar">
+            <h1 class="h1_cadastro">Cadastre-se</h1>
+            <form method="POST" action="./pages/loginCadastro/respostaCadastro.jsp" class="formCadastro">
+
+                <input class="input" type="email" name="email" id="iemail" placeholder="E-mail">
+
+                <input class="input" type="text" name="usuario" id="iusuario" placeholder="Usuário">
+
+                <input class="input" type="password" name="senha" id="isenha" placeholder="Senha">
+                <input type="submit" class="submit" value="Cadastrar">
+                
+                <div class="ajuda"><p>Precisa de ajuda?</p></div>
+        </div>
+        </form>
+    </section>
 </body>
 </html>
