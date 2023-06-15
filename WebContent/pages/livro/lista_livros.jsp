@@ -19,12 +19,35 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Livros</h1>
-<%
-	ArrayList<Livro> resultados = new ArrayList<Livro>();
-	Livro obj = null;
-	SelectDao dao = new SelectDao();
-	//ResultSet res = dao.listarLivros();
-%>
+	<table border="1px solid black" style="border-collapse:collapse;">
+		<thead>
+			<th>Id</th>
+			<th>Titulo</th>
+			<th>Descricao</th>
+			<th>Preço</th>
+		</thead>
+		<%
+		ArrayList<Livro> resultados = new ArrayList<Livro>(); 
+		Livro obj = null;
+		SelectDAO dao = new SelectDAO();
+		ResultSet res = dao.listarLivros();
+		while(res.next()){
+			obj = new Livro();
+			obj.setId(Integer.parseInt(res.getString(1)));
+			obj.setTitulo(res.getString(2));
+			obj.setDescricao(res.getString(3));
+			obj.setPreco(res.getString(4));
+			resultados.add(obj);
+		}
+		for (Livro resultado : resultados){%>
+			<tr>
+				<% for (int i = 1; i<9;i++) {%>
+					<td><%= obj.getColumnByIndex(i) %></td>
+				<%}%>
+				<td><a href="changeProj.jsp?id_projeto=<%=resultado.getId()%>">Alterar</a></td>
+				<td><a href="deleteProj.jsp?id_projeto=<%=resultado.getId()%>">Apagar</a></td>
+			</tr>
+		<%}%>
+	</table>
 </body>
 </html>
