@@ -19,24 +19,26 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<table border="1px solid black" style="border-collapse:collapse;">
+	<table>
 		<thead>
+		<tr>
 			<th>Id</th>
 			<th>Titulo</th>
 			<th>Descricao</th>
 			<th>Preço</th>
+		</tr>
 		</thead>
 		<%
 		ArrayList<Livro> resultados = new ArrayList<Livro>(); 
 		Livro obj = null;
-		SelectDAO dao = new SelectDAO();
+		SelectDao dao = new SelectDao();
 		ResultSet res = dao.listarLivros();
 		while(res.next()){
 			obj = new Livro();
 			obj.setId(Integer.parseInt(res.getString(1)));
 			obj.setTitulo(res.getString(2));
 			obj.setDescricao(res.getString(3));
-			obj.setPreco(res.getString(4));
+			obj.setPreco(res.getDouble(4));
 			resultados.add(obj);
 		}
 		for (Livro resultado : resultados){%>
