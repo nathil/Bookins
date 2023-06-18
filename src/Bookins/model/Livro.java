@@ -37,4 +37,18 @@ public class Livro {
 	public void setPreco(double preco) {
 		this.preco = preco;
 	}
+	
+	public String getColumnByIndex(int columnIndex) {
+	    // Implemente o código para retornar o valor da coluna com base no índice
+	    // Exemplo hipotético:
+	    if (columnIndex == 1) {
+	        return String.valueOf(this.id);
+	    } else if (columnIndex == 2) {
+	        return this.titulo;
+	    } else {
+	        // Lide com outros índices de coluna, se necessário
+	        return null;
+	    }
+	}
+
 }

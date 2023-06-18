@@ -1,12 +1,13 @@
 package Bookins.dao;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 //Conexao
 import Bookins.util.Conexao;
 
 public class SelectDao {
-	public void listarLivros() {
+	public ResultSet listarLivros() {
 		
 		Conexao con = null;
 		
@@ -16,5 +17,6 @@ public class SelectDao {
 		}catch(SQLException e){
 			System.out.print(e);
 		}
+		return null;
 	}
 }
