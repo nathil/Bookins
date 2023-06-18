@@ -74,7 +74,7 @@ public synchronized ResultSet executeQuery(String query) throws SQLException {
     try {
         return statement.executeQuery(query);
     } catch (SQLException ex) {
-
+    	
         System.out.println("Nao foi possıvel executar a query" + ex);
         return null;
         // throw ex; 
