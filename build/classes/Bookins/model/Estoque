@@ -1,5 +1,8 @@
 package Bookins.model;
 
+import Bookins.model.Estoque;
+import Bookins.util.Conexao;
+
 public class Estoque {
 	private int id; 
 	private String nome; 
