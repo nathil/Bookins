@@ -1,0 +1,26 @@
+package Bookins.dao;
+
+import java.sql.SQLException;
+
+import Bookins.model.Estoque;
+import Bookins.util.Conexao;
+
+public class EstoqueDao {
+public boolean inserirEstoque(Estoque s) {
+		
+		Conexao con = null;
+		
+		try {
+			con = new Conexao();
+			con.executeUpdate("INSERT INTO livro(id, nome, quantidade, preco, total) VALUES ("
+					+ "'" + s.getId() + "','"
+					+ s.getNome() + "','"
+					+ s.getQuantidade() + "','"
+					+ s.getPreco() + "','"
+					+ s.getTotal() +"');");
+			return true;
+		}catch(SQLException e){
+			return false;
+		}
+	}
+}
